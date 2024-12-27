@@ -1,0 +1,39 @@
+---
+title: "Team Members"
+toc: false
+---
+
+<div style="display: flex; flex-direction: column; gap: 20px;">
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+
+<img src="images/Neve.png" alt="Neve Zhang" style="width: 170px; border-radius: 10px;">
+
+<div>
+  - Name: <span style="font-size: 24px;">**Neve Zhang**</span>
+  - Concentration: Smart Cities
+  - Contact Information: <span style="font-style: italic;">tianyuzh@upenn.edu</span>
+  - Introduction: I'm a current Master of City Planning student at the University of Pennsylvania, graduating in 2025. I have expertise in data analytics, technical writing, and market and policy research. As a nature lover and global traveler, I'm passionate about combining sustainability and data-driven innovation to shape better urban environments.
+  - Hobbies:
+    - <span>Badminton</span>
+</div>
+
+</div>
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+
+<img src="images/Yaohan.png" alt="Yaohan Xu" style="width: 170px; border-radius: 10px;">
+
+<div>
+  - Name: <span style="font-size: 24px;">**Yaohan Xu**</span>
+  - Concentration: Sustainable Transportation and Infrastructure Planning (STIP)
+  - Contact Information: <span style="font-style: italic;">xuyaohan@upenn.edu</span>
+  - Introduction: I specialize in city and transportation planning, focusing on data-driven solutions. Leveraging expertise in product and interaction design, I develop intuitive digital platforms to improve urban living and connectivity.
+  - Hobbies:
+    - <span>Tennis</span>
+    - <span>Cooking</span>
+</div>
+
+</div>
+
+</div>

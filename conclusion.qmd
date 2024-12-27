@@ -1,0 +1,25 @@
+---
+title: "Conclusion"
+toc: false
+---
+
+From both analytical and application-driven perspectives, the project is a preliminary step to investigating and improving trash removal services in New York City. 
+
+### Analytical Findings
+Summarizing distribution of trash-related sanitation complaints (Section “Gather and Explore Additional Modeling Data”), our study has found consistent clustering patterns from Midtown Manhattan to northern Brooklyn. In most of the boroughs, higher complaint counts spatially corresponded with areas of lower non-white population share, lower Hispanic-Latino population share, and lower poverty rates; the Bronx Borough, however, stands out as the only area where high complaint counts align with the opposite trends. 
+
+We also note the dilemma that complaints may occur in places across the spectrum of differing management levels: on one hand, areas with denser urban development - indicated by smaller household units, vibrant food and drink services, as well as better litter basket placement - can be prone to frequent complaints due to high human activities; on the other hand, complaints also occur in vacant or under-maintained areas, such as those with high prevalence of derelict vehicles. This observation clearly indicates a potential to further distinguish different types of trash-related complaints, and implement different resources tailored to unique neighborhoods’ characteristics and challenges.
+
+### Application-driven Results
+Using Poisson Regression, we were able to deliver a data-driven complaint count projection tool designed to facilitate future scheduling needs of the New York City Department of Sanitation (DSNY). Overall, the model predicts better than taking the mean or median or historic data, and accommodates data release dates to allow prediction one-year ahead. 
+
+By applying the model to predict complaint counts for 2024, we generated daily projections for each DSNY unit throughout the year. These projections enable several practical applications, such as identifying the day of the week with the highest number of complaints city-wide, targeting the day of the week with the highest complaints within each DSNY unit, and locating the top ten DSNY units with the highest overall complaints. These insights can assist in optimizing trash collection schedules and improving route planning to enhance operational efficiency.
+
+### Model Improvement Suggestions
+Nonetheless, as the current model is trained on open data, the inherent limitations such as lack of details or historic data lead to two limitations in the model that will benefit from future improvement.
+
+First, when comparing the model's results to actual 2023 data, we observed a tendency of the model to overpredict in areas like Midtown Manhattan, the Bronx, parts of central Brooklyn, and southern Queens, where urban developments are denser and the original complaint counts are higher. In contrast, lower errors are observed in regions like southern Brooklyn and Staten Island, indicating better alignment between predicted and actual counts. These findings highlight the model’s limitations in capturing the dynamics of denser, high-activity urban zones. 
+
+Second, while the model provides temporal predictions, the day-to-day differences within most DSNY units are not significantly distinct. As many DSNY units share the same peak trash removal day of the week (Thursday), this could complicate task scheduling and hinder strategic resource allocation.
+
+To tackle the two shortcomings, we recommend incorporating more granular spatial data or leveraging additional time-series information to enhance the model's accuracy and temporal differentiation. We welcome feedback and collaboration opportunities to refine and further develop this project. If you are interested, please feel free to reach out to us!

@@ -1,0 +1,11 @@
+---
+title: "Optimizing Trash Collection Schedules"
+subtitle: "A Geospatial and Predictive Analysis of Sanitation Complaints in New York City"
+toc: false
+---
+
+## Here is a brief introduction of our topic!
+
+As a metropolitan home to over 8 million population, New York City is known for its wary sanitary conditions due to frequent street littering. For public agencies like the New York City Department of Sanitation (DSNY), which is responsible for residential trash, recycling, and street cleaning, there remain vast challenges to delivering trash management services, especially in underrepresented neighborhoods with limited local capacity.
+
+Leveraging 311 Service Requests, DSNY Frequencies, ACS (socioeconomic characteristics), and other spatial/time series data such as restaurant inspection records, we seek to investigate the patterns of sanitary complaints (ie. litter baskets, cleaning streets) across DSNY boundaries and days of the week, and devising a prediction algorithm to facilitate DSNY’s future trash collection schedules across the agency’s 609 frequency boundaries.

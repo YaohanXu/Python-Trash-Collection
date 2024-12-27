@@ -1,0 +1,11 @@
+# Data Analysis
+
+The data processing and analysis for the project consist of four main parts (seven chapters):
+
+1. Preprocessing of the large dataset (Chapters 1 and 2), which involves preparing the raw data for subsequent analysis.
+2. Processing and visualizing independent and dependent variables for 2022 (used for modeling) and 2023 (used for prediction), as well as spatially joining them with DSNY unit boundaries (Chapters 3 to 5).
+3. Building the model and predicting the sanitation complaint counts for 2024 (Chapter 6).
+4. Providing optimized trash collection strategies for DSNY based on the prediction results (Chapter 7).
+
+Additionally, since some of the datasets used in this project are too large to upload to GitHub, you can download the complete datasets using the following link if you wish to rerun the code: https://upenn.box.com/s/p4g3nu7x6uyayhlkaviofbe8f11no3wf.
+

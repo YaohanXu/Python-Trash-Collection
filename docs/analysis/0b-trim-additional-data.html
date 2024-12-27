@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Trim Additional Data – Final Project_Neve and Yaohan</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9ea0a49c779b6fc496fdb60b6bf00fef.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9b6c00cfdd9f97392670a293d2d1e528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Data Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/0b-trim-additional-data.html">Trim Additional Data</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/course-icon.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://yaohanxu.github.io/JS-Assign3/" title="Personal Website" class="quarto-navigation-tool px-1" aria-label="Personal Website"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/YaohanXu" title="Yaohan Xu GitHub" class="quarto-navigation-tool px-1" aria-label="Yaohan Xu GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.instagram.com/yaohan_xu/" title="Yaohan Xu Instagram" class="quarto-navigation-tool px-1" aria-label="Yaohan Xu Instagram"><i class="bi bi-instagram"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Team Members</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../analysis/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/0a-create-311-parquet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create 311 Parquet</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/0b-trim-additional-data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Trim Additional Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/1-process-and-visualize-sanitation-request-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Process and Visualize Sanitation Request Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/2-gather-and-explore-additional-modeling-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gather and Explore Additional Modeling Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/3-gather-and-explore-additional-prediction-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gather and Explore Additional Prediction Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/4-model-building-validation-and-prediction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Model Building, Validation, and Prediction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/5-application-and-optimization-recommendation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Use 2024 Predictions for DSNY Trash Collection Optimization</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusion</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up"><span class="header-section-number">1</span> Set Up</a></li>
+  <li><a href="#dohmh-new-york-city-restaurant-inspection-results" id="toc-dohmh-new-york-city-restaurant-inspection-results" class="nav-link" data-scroll-target="#dohmh-new-york-city-restaurant-inspection-results"><span class="header-section-number">2</span> DOHMH New York City Restaurant Inspection Results</a></li>
+  <li><a href="#other-311-requests" id="toc-other-311-requests" class="nav-link" data-scroll-target="#other-311-requests"><span class="header-section-number">3</span> Other 311 Requests</a>
+  <ul class="collapse">
+  <li><a href="#derelict-vehicles" id="toc-derelict-vehicles" class="nav-link" data-scroll-target="#derelict-vehicles"><span class="header-section-number">3.1</span> Derelict Vehicles</a></li>
+  <li><a href="#graffiti" id="toc-graffiti" class="nav-link" data-scroll-target="#graffiti"><span class="header-section-number">3.2</span> Graffiti</a></li>
+  <li><a href="#vacant-lot" id="toc-vacant-lot" class="nav-link" data-scroll-target="#vacant-lot"><span class="header-section-number">3.3</span> Vacant Lot</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Data Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/0b-trim-additional-data.html">Trim Additional Data</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Trim Additional Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Do not Re-run!!</strong></p>
+<p>To enhance the efficiency of data analysis, this section is used to pre-process other large datasets and store them as clean, reduced datasets created for analysis purposes. Additional data gathered and cleaned include Department of Health and Mental Hygiene (DOHMH) New York City Restaurant Inspection Results and additional 311 request records.</p>
+<p><em>This section should not be re-run due to its sole purpose for the creation of more manageable datasets.</em></p>
+<p>source: - DOHMH New York City Restaurant Inspection Results, NYC Open Data [https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/about_data] - 311 Service Requests from 2010 to Present, NYC Open Data [https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/about_data]</p>
+<section id="set-up" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="set-up"><span class="header-section-number">1</span> Set Up</h2>
+<div id="e29aa8d7-1e3a-4287-8d0f-66b77c9f697e" class="cell" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dohmh-new-york-city-restaurant-inspection-results" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="dohmh-new-york-city-restaurant-inspection-results"><span class="header-section-number">2</span> DOHMH New York City Restaurant Inspection Results</h2>
+<p>First, we loaded the New York City Restaurant Results dataset and extracted all unique violation types. While the violation types are highly descriptive, we note that terms like “mice,” “roaches,” and “vermin” are indicative of a restaurant’s high vulnerability to trash mismanagement. Using a complete list of these indicative words, we filtered the dataset to include only trash-related conditions and stored it for further use.</p>
+<div id="8791e3ee-92c3-424a-9bf2-272a2783be82" class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>res_inspection <span class="op">=</span> pd.read_csv(<span class="st">"data/DOHMH_New_York_City_Restaurant_Inspection_Results.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="180bed26-9631-4792-91d0-65e43ebdce22" class="cell" data-tags="[]" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>violation_types <span class="op">=</span> res_inspection[<span class="st">'VIOLATION DESCRIPTION'</span>].unique()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(violation_types)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[nan 'Thawing procedure improper.'
+ 'Hot TCS food item not held at or above 140 °F.'
+ 'Hot food item not held at or above 140º F.'
+ "Evidence of mice or live mice in establishment's food or non-food areas."
+ 'Hand wash sign not posted'
+ "Live roaches in facility's food or non-food area."
+ 'Current letter grade or Grade Pending card not posted'
+ 'Current letter grade sign not posted.'
+ 'Food contact surface not properly maintained.'
+ 'Wiping cloths soiled or not stored in sanitizing solution.'
+ 'Ashtrays in smoke-free area' 'Thawing procedures improper.'
+ 'Wiping cloths not stored clean and dry, or in a sanitizing solution, between uses.'
+ 'Permit not conspicuously displayed.'
+ 'Equipment used for ROP not approved by the Department'
+ 'Wash hands sign not posted near or above hand washing sink.'
+ "Live roaches present in facility's food and/or non-food areas."
+ "Evidence of rats or live rats in establishment's food or non-food areas."
+ 'MISBRANDED AND LABELING'
+ 'Workplace SFAA policy not prominently posted in workplace.'
+ 'Proper sanitization not provided for utensil ware washing operation.'
+ 'Workplace SFAA policy not prominently posted in workplace'
+ "Evidence of mice or live mice present in facility's food and/or non-food areas."
+ 'Food worker/food vendor does not use utensil or other barrier to eliminate bare hand contact with food that will not receive adequate additional heat treatment.'
+ 'Food Protection Certificate not held by supervisor of food operations.'
+ 'Sewage disposal system is not provided, improper, inadequate or unapproved.'
+ 'Failure to display required signage about plastic straw availability'
+ 'Establishment is not free of harborage or conditions conducive to rodents, insects or other pests.'
+ 'Lighting Inadequate'
+ 'Failure to post or conspicuously post healthy eating information'
+ 'Food Protection Certificate (FPC) not held by manager or supervisor of food operations.'
+ 'No Smoking permitted in an area where it is prohibited'
+ 'Sewage disposal system improper or unapproved.'
+ 'Accurate thermometer not provided in refrigerated or hot holding equipment.'
+ 'Food Protection Certificate not available for inspection'
+ 'Failure to display required signage about plastic straw availability.'
+ 'Non-food contact surface or equipment made of unacceptable material, not kept clean, or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.'
+ 'Accurate thermometer not provided or properly located in refrigerated, cold storage or hot holding equipment'
+ 'Raw, cooked or prepared food is adulterated, contaminated, cross-contaminated, or not discarded in accordance with HACCP plan.'
+ 'After cooking or removal from hot holding, TCS food not cooled by an approved method whereby the internal temperature is reduced from 140 °F to 70 °F or less within 2  hours, and from 70 °F to 41 °F or less within 4 additional hours.'
+ 'Insufficient or no refrigerated or hot holding equipment to keep potentially hazardous foods at required temperatures.'
+ 'Design, construction, materials used or maintenance of food contact surface improper.  Surface not easily cleanable, sanitized and maintained.'
+ 'Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.'
+ 'Sanitized equipment or utensil, including in-use food dispensing utensil, improperly used or stored.'
+ 'Cold TCS food item held above 41 °F; smoked or processed fish held above 38 °F; intact raw eggs held above 45 °F; or reduced oxygen packaged (ROP) TCS foods held above required temperatures except during active necessary preparation.'
+ 'Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.'
+ 'Filth flies or food/refuse/sewage associated with (FRSA) flies or other nuisance pests in establishment’s food and/or non-food areas. FRSA flies include house flies, blow flies, bottle flies, flesh flies, drain flies, Phorid flies and fruit flies.'
+ 'Single service article not provided.  Single service article reused or not protected from contamination when transported, stored, dispensed.  Drinking straws not completely enclosed in wrapper or dispensed from a sanitary device.'
+ 'Mechanical or natural ventilation not provided, inadequate, improperly installed, in disrepair or fails to prevent and control excessive build-up of grease, heat, steam condensation, vapors, odors, smoke or fumes.'
+ 'Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.'
+ 'Design, construction, materials used or maintenance of food contact surface improper. Surface not easily cleanable, sanitized and maintained.'
+ 'Design, construction, materials used or maintenance of food contact surface improper.  Surface not easily cleanable, sanitized and maintained.  Culinary sink or other acceptable method not provided for washing food.'
+ 'Food not protected from potential source of contamination during storage, preparation, transportation, display or service.'
+ 'Filth flies or food/refuse/sewage associated with (FRSA) flies or other nuisance pests  in  establishment’s food and/or non-food areas. FRSA flies include house flies, blow flies, bottle flies, flesh flies, drain flies, Phorid flies and fruit flies.'
+ 'Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.'
+ 'Anti-siphonage or back-flow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly. Condensation or liquid waste improperly disposed of.'
+ 'Food, supplies, and equipment not protected from potential source of contamination during storage, preparation, transportation, display or service.'
+ 'Swollen, leaking, rusted or otherwise damaged canned food to be returned to distributor not segregated from intact product and clearly labeled DO NOT USE'
+ 'Personal cleanliness inadequate. Outer garment soiled with possible contaminant. Effective hair restraint not worn in an area where food is prepared.'
+ 'Dishwashing and ware washing: Cleaning and sanitizing of tableware, including dishes, utensils, and equipment deficient.'
+ 'Personal cleanliness is inadequate. Outer garment soiled with possible contaminant. Effective hair restraint not worn where required. Jewelry worn on hands or arms. Fingernail polish worn or fingernails not kept clean and trimmed.'
+ 'Food, supplies, or equipment not protected from potential source of contamination during storage, preparation, transportation, display, service or from customer’s refillable, reusable container.  Condiments not in single-service containers or dispensed directly by the vendor.'
+ 'Contract with a pest management professional not in place.  Record of extermination activities not kept on premises.'
+ 'No hand washing facility in or adjacent to toilet room or within 25 feet of a food preparation, food service or ware washing area. Hand washing facility not accessible, obstructed or used for non-hand washing purposes. No hot and cold running water or water at inadequate pressure. No soap or acceptable hand-drying device.'
+ 'Properly scaled and calibrated thermometer or thermocouple not provided or not readily accessible in food preparation and hot/cold holding areas to measure temperatures of TCS foods during cooking, cooling, reheating, and holding.'
+ 'Pesticide not properly labeled or used by unlicensed individual. Pesticide, other toxic chemical improperly used/stored. Unprotected, unlocked bait station used.'
+ 'Mechanical or natural ventilation system not provided,  improperly installed, in disrepair and/or fails to prevent excessive build-up of grease, heat, steam condensation vapors, odors, smoke, and fumes.'
+ 'Cold food item held above 41º F (smoked fish and reduced oxygen packaged foods above 38 ºF) except during necessary preparation.'
+ "Evidence of rats or live rats present in facility's food and/or non-food areas."
+ 'Personal cleanliness is inadequate. Outer garment soiled with possible contaminant. Effective hair restraint not worn where required.  Jewelry is worn on hands or arms.  Fingernail polish worn or fingernails not kept clean and trimmed.'
+ 'Toilet facility not provided for employees or for patrons when required. Shared patron-employee toilet accessed through kitchen, food prep or storage area or utensil washing area.'
+ 'No approved written standard operating procedure for avoiding contamination by refillable returnable containers.'
+ 'Single service item reused, improperly stored, dispensed; not used when required.'
+ 'Garbage receptacle not pest or water resistant, with tight-fitting lids, and covered except while in active use. Garbage receptacle and cover not cleaned after emptying and prior to reuse. Garbage, refuse and other solid and liquid waste not collected, stored, removed and disposed of so as to prevent a nuisance.'
+ 'Food allergy information poster not conspicuously posted where food is being prepared or processed by food workers.'
+ 'The original nutrition fact labels or ingredient label for a cooking oil, shortening or margarine or food item sold in bulk, or acceptable manufacturer’s documentation not maintained on site.'
+ 'Food worker/food vendor does not wash hands thoroughly after using the toilet, or after coughing, sneezing, smoking, eating, preparing raw foods or otherwise contaminating hands or does not change gloves when required; Worker fails to refrain from smoking or being fully clothed in clean outer garments.'
+ 'Contract with a pest management professional not in place. Record of extermination activities not kept on premises.'
+ 'Food, supplies, or equipment not protected from potential source of contamination during storage, preparation, transportation, display, service or from customer’s refillable, reusable container. Condiments not in single-service containers or dispensed directly by the vendor.'
+ 'Insufficient or no hot holding, cold storage or cold holding equipment provided to maintain Time/Temperature Control for Safety Foods (TCS) at required temperatures'
+ 'Tobacco or electronic cigarette use, eating, or drinking from open container in food preparation, food storage or dishwashing area.'
+ 'Unapproved outdoor, street or sidewalk cooking.'
+ 'Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility’s food and/or non-food areas.  Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies.  Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.'
+ 'TCS food removed from cold holding or prepared from or combined with ingredients at room temperature not cooled by an approved method to 41 °F or below within 4 hours.'
+ 'Pesticide use not in accordance with label or applicable laws. Prohibited chemical used/stored. Open bait station used.'
+ 'After cooking or removal from hot holding, TCS food not cooled by an approved method whereby the internal temperature is reduced from 140 °F to 70 °F or less within 2 hours, and from 70 °F to 41 °F or less within 4 additional hours.'
+ '“Choking first aid” poster not posted. “Alcohol and Pregnancy” warning sign not posted. Resuscitation equipment: exhaled air resuscitation masks (adult &amp; pediatric), latex gloves, sign not posted.'
+ "Live animals other than fish in tank or service animal present in facility's food and/or non-food areas."
+ 'Pesticide not properly labeled or used by unlicensed individual.  Pesticide, other toxic chemical improperly used/stored. Unprotected, unlocked bait station used.'
+ 'Toilet facility not maintained or provided with toilet paper, waste receptacle or self-closing door.'
+ 'Hand washing facility not provided in or near food preparation area and toilet room. Hot and cold running water at adequate pressure to enable cleanliness of employees not provided at facility. Soap and an acceptable hand-drying device not provided.'
+ 'Food not cooled by an approved method whereby the internal product temperature is reduced from 140º F to 70º F or less within 2  hours, and from 70º F to 41º F or less within 4 additional hours.'
+ 'Dishwashing and ware washing:  Cleaning and sanitizing of tableware, including dishes, utensils, and equipment deficient.'
+ 'Live animal other than fish in tank or service animal present in facility’s food or non-food area.'
+ 'HACCP plan not approved or approved HACCP plan not maintained on premises.'
+ 'Food, food preparation area, food storage area, area used by employees or patrons, contaminated by sewage or liquid waste.'
+ 'Warning sign re dangers of hookah smoking not posted at or on each public entryway to Non-Tobacco Hookah Establishment (NTHE) patron'
+ 'Failure to maintain a sufficient supply of single-use, non-compostable plastic straws.'
+ 'Sign prohibiting smoking or using electronic cigarettes not conspicuously posted.'
+ 'Food worker does not use proper utensil to eliminate bare hand contact with food that will not receive adequate additional heat treatment.'
+ 'Nuisance created or allowed to exist. Facility not free from unsafe, hazardous, offensive or annoying condition.'
+ 'Single service article not provided. Single service article reused or not protected from contamination when transported, stored, dispensed. Drinking straws not completely enclosed in wrapper or dispensed from a sanitary device.'
+ 'Required succinct nutritional statements not posted on menu(s) for adults and children (2,000 calories per day for adults)'
+ 'Flavored tobacco products sold or offered for sale'
+ 'No hand washing facility in or adjacent to toilet room or within 25 feet of a food preparation, food service or ware washing area.  Hand washing facility not accessible, obstructed or used for non-hand washing purposes. No hot and cold running water or water at inadequate pressure. No soap or acceptable hand-drying device.'
+ 'Providing single-use, non-compostable plastic straws to customers without customer request (including providing such straws at a self-serve station)'
+ 'Failure to comply with an order of the Board of Health, Commissioner or Department.'
+ 'Additional nutritional information statement not posted, or additional nutritional information not provided'
+ 'Current letter grade or "Grade Pending" card not posted.'
+ 'Shellfish not from approved source, not or improperly tagged/labeled; tags not retained for 90 days.'
+ 'Tobacco use, eating, or drinking from open container in food preparation, food storage or dishwashing area observed.'
+ 'Food, prohibited, from unapproved or unknown source, home canned or home prepared. Animal slaughtered, butchered or dressed (eviscerated, skinned) in establishment. Reduced Oxygen Packaged (ROP) fish not frozen before processing. ROP food prepared on premises transported to another site.'
+ 'Personal cleanliness is inadequate. Outer garment soiled with possible contaminant. Effective hair restraint not worn where required.  Jewelry worn on hands or arms.  Fingernail polish worn or fingernails not kept clean and trimmed.'
+ 'No or inadequate potable water supply. Water or ice not potable or from unapproved source. Bottled water not NY State certified. Cross connection in potable water supply system.'
+ 'Additional nutritional information statement not posted, and/or additional nutritional information not provided.'
+ 'Caloric content not posted on menus, menu boards or food tags, in a food service establishment that is 1 of 15 or more outlets operating the same type of business nationally under common ownership or control, or as a franchise or doing business under the same name, for each menu item that is served in portions, the size and content of which are standardized.'
+ 'Lighting fixture located over, by or within food storage, preparation, service or display facility, and facility where utensils and equipment are cleaned and stored, which may shatter due to extreme heat, temperature changes or accidental contact; not fitted with shatterproof bulb or shielded and encased, with end caps or other device.'
+ 'Harmful, noxious gas or vapor detected. CO =13 ppm.'
+ 'Food adulterated or misbranded.  Adulterated or misbranded food possessed, being manufactured, produced, packed, sold, offered for sale, delivered or given away'
+ 'Document issued by the Board of Health, Commissioner or Department reproduced or altered. False, untrue or misleading statement or document made to, submitted or filed with the Department'
+ 'Time/Temperature Control for Safety (TCS) food not cooked to required minimum internal temperature.   • Poultry, poultry parts, ground and comminuted poultry, all stuffing containing poultry, meats, fish or ratites to or above 165 °F for 15 seconds with no interruption of the cooking process   • Ground meat, and food containing ground and comminuted meat, to or above 158 °F for 15 seconds with no interruption of the cooking process, except per individual customer request  • Pork, any food containing pork to or above 150 °F for 15 seconds  • Mechanically tenderized or injected meats to or above 155 °F.  • Whole meat roasts and beef steak to or above required temperature and time except per individual customer request  • Raw animal foods cooked in microwave to or above165 °F, covered, rotated or stirred   • All other foods to or above 140 °F for 15 seconds; shell eggs to or above 145 °F for 15 seconds except per individual customer request.'
+ 'Appropriately scaled metal stem-type thermometer or thermocouple not provided or used to evaluate temperatures of potentially hazardous foods during cooking, cooling, reheating and holding.'
+ 'Current letter grade or "Grade Pending" card not conspicuously posted or visible to passersby'
+ 'Required calorie information not posted/improperly posted.'
+ 'Unclean or cracked whole eggs or unpasteurized liquid, frozen or powdered eggs kept or used.'
+ 'Covered garbage receptacle not provided or inadequate, except that garbage receptacle may be uncovered during active use. Garbage storage area not properly constructed or maintained; grinder or compactor dirty.'
+ 'Food worker does not wash hands thoroughly after using the toilet, coughing, sneezing, smoking, eating, preparing raw foods or otherwise contaminating hands.'
+ 'Lighting inadequate; permanent lighting not provided in food preparation areas, ware washing areas, and storage rooms. Shatterproof bulb or shield to prevent broken glass from falling into food or onto surfaces, not installed.'
+ '“Choking first aid” poster not posted. “Alcohol and pregnancy” warning sign not posted. Resuscitation equipment: exhaled air resuscitation masks (adult &amp; pediatric), latex gloves, sign not posted.'
+ 'Hot TCS food item that has been cooked and cooled is being held for service without first being reheated to 165º F or above within 2 hours.'
+ 'Canned food product observed dented and not segregated from other consumable food items.'
+ 'Records and logs not maintained to show that approved HACCP plan has been properly implemented.'
+ 'No facilities available to wash, rinse and sanitize utensils and/or equipment.'
+ 'Harmful noxious gas or vapor detected. Carbon Monoxide (CO) level exceeds nine (9) ppm'
+ 'Juice packaged on premises with no or incomplete label, no warning statement'
+ 'Food prepared from ingredients at ambient temperature not cooled to 41º F or below within 4 hours.'
+ 'Meat, fish, molluscan shellfish, unpasteurized raw shell eggs, poultry or other TCS offered or served raw or undercooked and written notice not provided to consumer.'
+ 'Hot food item that has been cooked and refrigerated is being held for service without first being reheated to 165º F or above within 2 hours.'
+ 'Toxic chemical improperly labeled, stored or used such that food contamination may occur.'
+ 'Nuisance created or allowed to exist.  Facility not free from unsafe, hazardous, offensive or annoying conditions.'
+ 'Sale or use of certain expanded polystyrene items restricted'
+ 'Providing single-use plastic stirrers or single-use plastic splash sticks.'
+ 'Food worker/food vendor does not wash hands thoroughly  after using the toilet, or after coughing, sneezing, smoking, eating, preparing raw foods or otherwise contaminating hands or does not change gloves when required; Worker fails to refrain from smoking or  being fully clothed in clean outer garments.'
+ 'Food not cooked to required minimum temperature.'
+ 'Food from unapproved or unknown source or home canned. Reduced oxygen packaged (ROP) fish not frozen before processing; or ROP foods prepared on premises transported to another site.'
+ 'Food adulterated or misbranded. Adulterated or misbranded food possessed, being manufactured, produced, packed, sold, offered for sale, delivered or given away'
+ 'Hot TCS food item that has been cooked and  cooled is being held for service without first being reheated to 165º F or above within 2 hours.'
+ 'Toxic chemical or pesticide improperly stored or used such that food contamination may occur.'
+ 'Expanded Polystyrene (EPS) single service article not designated as a recyclable material.'
+ 'Bulb not shielded or shatterproof, in areas where there is extreme heat, temperature changes, or where accidental contact may occur.'
+ 'Food preparation area, food storage area, or other area used by employees or patrons, contaminated by sewage or liquid waste.'
+ 'Food contact surface, refillable, reusable containers, or equipment improperly constructed, placed or maintained. Unacceptable material used. Culinary sink or other acceptable method not provided for washing food.'
+ 'Food contact surface, refillable, reusable containers, or equipment improperly constructed, placed or maintained. Unacceptable material used.  Culinary sink or other acceptable method not provided for washing food.'
+ 'Commercially processed pre-cooked TCS in hermetically sealed containers and precooked TCS in intact packages from non-retail food processing establishments not heated to 140 °F within 2 hours of removal from container or package.'
+ 'Precooked potentially hazardous food from commercial food processing establishment that is supposed to be heated, but is not heated to 140º F within 2 hours.'
+ 'Toilet facility not maintained and provided with toilet paper, waste receptacle and self-closing door.'
+ 'Required nutritional information statement not posted (2,000 calories per day).'
+ 'Providing compostable plastic straws to be used outside of the food establishment’s premises; failure to appropriately dispose of compostable plastic straws; failure to maintain required bins for disposal of compostable plastic straws.'
+ 'Food, prohibited, from unapproved or unknown source, home canned or home prepared.  Animal slaughtered, butchered or dressed (eviscerated, skinned) in establishment. Reduced Oxygen Packaged (ROP) fish not frozen before processing.  ROP food prepared on premises transported to another site.'
+ 'The original nutritional fact labels and/or ingredient label for a cooking oil, shortening or margarine or food item sold in bulk, or acceptable manufacturer’s documentation not maintained on site.'
+ 'Current valid permit, registration or other authorization to operate a Temporary Food Service Establishment (TFSE) not available.'
+ 'Food contact surface improperly constructed or located. Unacceptable material used.'
+ 'Food service operation occurring in room or area used as living or sleeping quarters.'
+ 'Food containing a prohibited substance held, kept, offered, prepared, processed, packaged, or served.'
+ 'Manufacture of frozen dessert not authorized on Food Service Establishment permit. Milk or milk product undated, improperly dated or expired.'
+ 'Written Standard Operating Procedure (SOP) approved by the Department for refillable, reusable containers not available at the time of inspection.  Container construction improper'
+ 'Time/Temperature Control for Safety (TCS) food not cooked to required minimum internal temperature. • Poultry, poultry parts, ground and comminuted poultry, all stuffing containing poultry, meats, fish or ratites to or above 165 °F for 15 seconds with no interruption of the cooking process  • Ground meat, and food containing ground and comminuted meat, to or above 158 °F for 15 seconds with no interruption of the cooking process, except per individual customer request• Pork, any food containing pork to or above 150 °F for 15 seconds• Mechanically tenderized or injected meats to or above 155 °F.• Whole meat roasts and beef steak to or above required temperature and time except per individual customer request• Raw animal foods cooked in microwave to or above165 °F, covered, rotated or stirred  • All other foods to or above 140 °F for 15 seconds; shell eggs to or above 145 °F for 15 seconds except per individual customer request.'
+ 'Harmful noxious gas or vapor detected.  Carbon Monoxide (CO) level exceeds nine (9) ppm'
+ 'Food, food preparation area, food storage area, or other area used by employees or patrons, contaminated by sewage or liquid waste.'
+ 'Flavored tobacco products sold, offered for sale'
+ 'Sodium Warning statement not posted conspicuously at the point of purchase. “Warning: [icon image] indicates that the sodium (salt) content of this item is higher than the total daily recommended limit (2300 mg). High sodium intake can increase blood pressure and risk of heart disease and stroke.”'
+ 'Food worker or vendor working or is knowingly or negligently permitted to work in FSE while afflicted with  infected wound  or reportable communicable disease.  No spitting allowed. Spitting anywhere in the establishment is prohibited.'
+ 'Sodium Warning icon not posted on menus, menu boards or food tags for food items that contain 2300mg or more of sodium in a food service establishment that is 1 of 15 or more outlets operating the same type of business nationally under common ownership or control, or as a franchise or doing business under the same name, for each menu item that is served in portions, the size and content of which are standardized'
+ 'Order or notice posted or required to be posted by the Department mutilated, obstructed or removed.'
+ 'Smoke free workplace smoking policy inadequate, not posted, not provided to employees.'
+ 'Food package (including canned food product or hermetically sealed container) not in good condition to the degree contents are not suitable for human consumption. Package is swollen, leaking or rusted, without “DO NOT USE” label or not segregated from consumable food items.'
+ 'Original label for smoking products sold or offered for sale.'
+ 'Current valid permit, registration or other authorization to operate a Food Service Establishment (FSE) or Non-retail Food Processing Establishment (NRFP) not available.'
+ 'Ashtray present in smoke-free area.'
+ 'Failure to make a good faith effort to inform smokers or electronic cigarette users of Smoke-Free Air Act ("SFAA") prohibitions'
+ 'Failure to provide a single-use, non-compostable plastic straw upon request.'
+ 'Sodium Warning - Statement'
+ 'Document issued by the Board of Health, Commissioner or Department unlawfully reproduced or altered.'
+ 'Food service operation occurring in room used as living or sleeping quarters.'
+ 'Potable water supply inadequate. Water or ice not potable or from unapproved source. Cross connection in potable water supply system observed.'
+ 'Operator failed to make a good faith effort to inform smokers or users of electronic cigarettes of the SFAA'
+ 'ROP processing equipment not approved by DOHMH.'
+ 'Smoking or electronic cigarette use allowed in prohibited area'
+ 'Failure to comply with an Order of the Board of Health, Commissioner, or Department.'
+ 'No or inadequate potable water supply. Water or ice not potable or from unapproved source. Bottled water not NY State certified.  Cross connection in potable water supply system.'
+ 'Food allergy poster does not contain text provided or approved by Department.'
+ 'Warning sign re dangers of hookah smoking not posted in each room or area of Non-Tobacco Hookah Establishment (NTHE) where smoking is allowed'
+ 'A food containing artificial trans fat, with 0.5 grams or more of trans fat per serving, is being stored, distributed, held for service, used in preparation of a menu item, or served.'
+ 'Sign prohibiting smoking or using electronic cigarettes not conspicuously  posted'
+ 'Unpasteurized milk or milk product (except certain aged cheese) served.'
+ 'Shellfish not from approved source, improperly tagged/labeled; tags not retained for 90 days.'
+ '“No Smoking” and/or “Smoking Permitted” sign not conspicuously posted. Health warning not present on “Smoking Permitted” sign.'
+ 'Meat, fish or molluscan shellfish served raw or undercooked without prior notification to customer.'
+ 'Raw fruit or vegetable not properly washed prior to cutting or serving.'
+ 'Eggs found dirty/cracked; liquid, frozen or powdered eggs not pasteurized.'
+ 'Sodium Warning - Icon not posted'
+ 'Food worker or vendor working or is knowingly or negligently permitted to work in FSE while afflicted with infected wound or reportable communicable disease. No spitting allowed. Spitting anywhere in the establishment is prohibited.'
+ 'Duties of an officer of the Department interfered with or obstructed.'
+ 'Sodium Warning icon posted on menus, menu boards or food tags for food items that contain 2300mg or more of sodium is not a black and white equilateral triangle; or the  equilateral triangle is not as wide as it is tall, or is not equal in height to the largest letter in the food item’s name, as displayed on the menu, menu board, or tag.'
+ 'Letter grade or Grade Pending card not conspicuously posted and visible to passersby.'
+ 'Food package (including canned food product or hermetically sealed container) not in good condition to the degree contents are not suitable for human consumption.  Package is swollen, leaking or rusted, without “DO NOT USE” label or not segregated from consumable food items.'
+ 'Records and logs not maintained to demonstrate that HACCP plan has been properly implemented.'
+ 'A food containing artificial trans-fat, with 0.5 grams or more of trans fat per serving, is being stored, distributed, held for service, used in preparation of a menu item, or served.'
+ 'Sodium Warning - Icon not compliant'
+ 'Organics mixed with non-organic material'
+ 'Notice of the Department of Board of Health mutilated, obstructed, or removed.'
+ 'Non-TCS food that has been served to the public being re-served. (Does not apply to wrapped foods where the wrapper seal has not been broken or opened).'
+ 'Food not labeled in accordance with the approved HACCP plan'
+ 'Failure to post signage in organics collection area.'
+ "Prohibited drink listed on children's meal menu"
+ 'Original label for smoking products sold or offered for sale'
+ 'Raw food not properly washed prior to serving.'
+ 'Canned food product observed swollen, leaking or rusted, and not segregated from other consumable food items.'
+ 'Sign prohibiting entry of persons under 21 years of age not posted at public entryway to Non-Tobacco Hookah Establishment (NTHE)'
+ 'Organics containers not provided'
+ 'Letter grade or Grade Pending card removed, destroyed, modified, obscured, or otherwise tampered with'
+ 'Toilet facility used by women does not have at least one covered garbage receptacle.'
+ 'Food not labeled in accordance with HACCP plan.'
+ 'Sale of tobacco products, herbal cigarettes, liquid nicotine, shisha, rolling papers or smoking paraphernalia to minors prohibited']</code></pre>
+</div>
+</div>
+<div id="4cd0cb5f-160b-4b63-8996-3402542749fb" class="cell" data-tags="[]" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>violation_list <span class="op">=</span> [<span class="st">"sewage"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"mice"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"roaches"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"pest"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"rodents"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"harborage"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vermin"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"filth"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"flies"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"garbage"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"receptacle"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"organics"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"nuisance"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"waste"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"back-flow"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="3c7624bd-a1c3-41b3-a2b2-efa89275069b" class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create regex pattern from complaint_list</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>violation_pattern <span class="op">=</span> <span class="st">"|"</span>.join(violation_list)  <span class="co"># Combine terms into a regex pattern</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for specific complaint types in 'VIOLATION DESCRIPTION'</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>res_inspection_filtered <span class="op">=</span> res_inspection[</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    res_inspection[<span class="st">'VIOLATION DESCRIPTION'</span>].<span class="bu">str</span>.contains(violation_pattern, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0e49b640-3ae0-4f39-8733-60546b0fe717" class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store trimmed data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>res_inspection_filtered.to_csv(<span class="st">"data/sanitation_related_restaurant_inspections.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="other-311-requests" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="other-311-requests"><span class="header-section-number">3</span> Other 311 Requests</h2>
+<p>Additionally, we extracted complaint records for “derelict vehicles” and “graffiti” from the 311 request parquet. Like trash-related requests, these complaints are also handled by DSNY and reflect poorly managed locations prone to trash dumping. We filtered and stored the records associated with these two complaints separately for further use.</p>
+<div id="f336b430-44c3-4a9f-a0f9-9cc9287f2fd9" class="cell" data-tags="[]" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Master Parquet file</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>requests <span class="op">=</span> pd.read_parquet(<span class="st">'data/311_Service_Requests.parquet'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="192432c2-c920-4c50-855f-f6696dacc390" class="cell" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>filtered_requests <span class="op">=</span> requests[</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    (requests[<span class="st">'Agency'</span>] <span class="op">==</span> <span class="st">'DSNY'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="d56d4de0-4bbd-434f-be81-38810fc4254d" class="cell" data-tags="[]" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a column of the complaint creation date</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>filtered_requests <span class="op">=</span> filtered_requests.rename(columns<span class="op">=</span>{<span class="st">'Created Date'</span>: <span class="st">'Created Date Time'</span>})</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>filtered_requests <span class="op">=</span> filtered_requests.rename(columns<span class="op">=</span>{<span class="st">'Closed Date'</span>: <span class="st">'Closed Date Time'</span>})</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>filtered_requests[<span class="st">'Created Date'</span>] <span class="op">=</span> pd.to_datetime(filtered_requests[<span class="st">'Created Date Time'</span>], <span class="bu">format</span><span class="op">=</span><span class="st">'%m/</span><span class="sc">%d</span><span class="st">/%Y %I:%M:%S %p'</span>).dt.date</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop redundant columns</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>filtered_requests <span class="op">=</span> filtered_requests.drop(columns<span class="op">=</span>[<span class="st">'Created Date Time'</span>, <span class="st">'Closed Date Time'</span>])</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>start_date <span class="op">=</span> datetime.strptime(<span class="st">'2022-01-01'</span>, <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>).date()</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>end_date <span class="op">=</span> datetime.strptime(<span class="st">'2023-12-31'</span>, <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>).date()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="derelict-vehicles" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="derelict-vehicles"><span class="header-section-number">3.1</span> Derelict Vehicles</h3>
+<div id="8871669c-da7e-47d1-b66b-6bc650fcabcc" class="cell" data-tags="[]" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>derelict_vehicles <span class="op">=</span> filtered_requests[</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    (filtered_requests[<span class="st">'Complaint Type'</span>] <span class="op">==</span> <span class="st">"Derelict Vehicles"</span>) <span class="op">&amp;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    (filtered_requests[<span class="st">'Created Date'</span>] <span class="op">&gt;=</span> start_date) <span class="op">&amp;</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    (filtered_requests[<span class="st">'Created Date'</span>] <span class="op">&lt;=</span> end_date)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="434c8ab2-a988-4f58-ae96-5393faec0d68" class="cell" data-tags="[]" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store trimmed data</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>derelict_vehicles.to_parquet(<span class="st">'data/derelict_vehicles.parquet'</span>, engine<span class="op">=</span><span class="st">'pyarrow'</span>, compression<span class="op">=</span><span class="st">'snappy'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="graffiti" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="graffiti"><span class="header-section-number">3.2</span> Graffiti</h3>
+<div id="a463d626-3d03-433f-aa20-34f617951921" class="cell" data-tags="[]" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>graffiti <span class="op">=</span> filtered_requests[</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    (filtered_requests[<span class="st">'Complaint Type'</span>] <span class="op">==</span> <span class="st">"Graffiti"</span>) <span class="op">&amp;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    (filtered_requests[<span class="st">'Created Date'</span>] <span class="op">&gt;=</span> start_date) <span class="op">&amp;</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    (filtered_requests[<span class="st">'Created Date'</span>] <span class="op">&lt;=</span> end_date)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0ce10134-ce3a-4473-931b-96650aa58289" class="cell" data-tags="[]" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store trimmed data</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>graffiti.to_parquet(<span class="st">'data/graffiti.parquet'</span>, engine<span class="op">=</span><span class="st">'pyarrow'</span>, compression<span class="op">=</span><span class="st">'snappy'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="vacant-lot" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="vacant-lot"><span class="header-section-number">3.3</span> Vacant Lot</h3>
+<p>We considered adding vacant lot as a factor, but there is no data reported under this category for the specified years.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>xuyaohan99@gmail.com/nevezhang00@gmail.com</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️❤️❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

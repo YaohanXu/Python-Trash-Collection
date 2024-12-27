@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    port: 3333
+
+website:
+  title: "Final Project_Neve and Yaohan"
+  page-footer:
+    left: "xuyaohan99@gmail.com/nevezhang00@gmail.com"
+    right: "This page is built with ❤️❤️❤️ and [Quarto](https://quarto.org/)."
+
+  sidebar:
+    logo: "images/course-icon.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: globe
+        href: https://yaohanxu.github.io/JS-Assign3/
+        text: "Personal Website"
+      - icon: github
+        href: https://github.com/YaohanXu
+        text: "Yaohan Xu GitHub"
+      - icon: instagram
+        href: https://www.instagram.com/yaohan_xu/
+        text: "Yaohan Xu Instagram"
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Project Overview
+      - about.qmd
+      - section: analysis/index.qmd
+        contents:
+          - analysis/0a-create-311-parquet.ipynb
+          - analysis/0b-trim-additional-data.ipynb
+          - analysis/1-process-and-visualize-sanitation-request-data.ipynb
+          - analysis/2-gather-and-explore-additional-modeling-data.ipynb
+          - analysis/3-gather-and-explore-additional-prediction-data.ipynb
+          - analysis/4-model-building-validation-and-prediction.ipynb
+          - analysis/5-application-and-optimization-recommendation.ipynb
+      - conclusion.qmd
+
+format:
+  html:
+    highlight-style: solarized
+    theme: cosmo
+    css: styles.css
+    code-copy: true
+    code-overflow: wrap
+    toc: true
